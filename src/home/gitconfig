@@ -1,0 +1,14 @@
+[github]
+	user = yo@rodrigogarcia.me
+[pull]
+	rebase = true
+[includeIf "gitdir:~/Repositories/"]
+  path = .gitconfig-personal
+[includeIf "gitdir:~/Repositories/ing/"]
+  path = .gitconfig-work
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	autocrlf = input
+	precomposeUnicode = true
+[ssh]
+	variant = ssh
