@@ -119,10 +119,16 @@ let g:syntastic_javascript_eslint_exec='$(npm bin)/eslint'
 " {{{ fzf 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob """!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 " }}}
-" {{{ python 
+" {{{ python3
 let g:python3_host_prog='/Users/rodrigogarcialeon/.virtualenvs/neovim/bin/python'
+" }}}
+" {{{ python2
+let g:loaded_python_provider=1
 " }}}
 " {{{ ruby 
 let g:loaded_ruby_provider=1
+" }}}
+" {{{ node 
+let g:loaded_node_provider=1
 " }}}
 " vim:foldmethod=marker:foldlevel=0
