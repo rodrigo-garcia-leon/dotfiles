@@ -144,7 +144,7 @@ module.exports = {
     'hyperterm-summon',
     "hyperalfred",
     'hyper-pane',
-    "hyper-electron-highlighter"
+    "hyper-website-theme"
   ],
 
   // in development, you can create a directory under
