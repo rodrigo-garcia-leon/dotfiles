@@ -8,10 +8,9 @@ ING_NETWORK="ENTER"
 # }}}
 # {{{ aliases
 alias f='fasd -f'
-alias boweri='bower install'
-alias boweru='bower update'
 alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
-alias gRaU='git remote add upstream'
+alias l='exa --long --all --git --group'
+alias c='bat'
 # }}}
 # {{{ sources
 [[ -e $HOME/.secrets ]] && source $HOME/.secrets
@@ -20,7 +19,7 @@ alias gRaU='git remote add upstream'
 # {{{ functions
 function remove_node_modules { rm -rf node_modules* } 
 function remove_bower_components { rm -rf bower_components* } 
-function reset_bower_components { remove_bower_components && bower install } 
+function remove_dependencies { remove_bower_components; remove_node_modules; }
 function setup_ing_proxy() { source $HOME/Repositories/ing/scripts/setup_proxy }
 function unset_ing_proxy() { source $HOME/Repositories/ing/scripts/unset_proxy }
 function link_ing_npmrc() { ln -s $HOME/Repositories/ing/dotfiles/npmrc $HOME/.npmrc }
