@@ -19,18 +19,15 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/fzf'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'octave.vim--'
+Plugin 'igrmk/kull-vim'
 call vundle#end()
 " }}}
 " {{{ color 
 syntax enable
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-if has('nvim')
-  set termguicolors
-endif
-colorscheme gruvbox
+colorscheme kull
 " }}}
 " {{{ spaces & tabs 
 filetype plugin indent on
