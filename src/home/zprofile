@@ -43,11 +43,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  "/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
-  $HOME/.cargo/bin
-  $HOME/.jenv/bin
-  $HOME/.rvm/bin
-  $HOME/.local/bin
+  $HOME/{.vscode-insiders,.cargo,.jenv,.rvm,.local}/bin
   /usr/local/opt/go/libexec/bin
   /usr/local/{bin,sbin}
   $path
