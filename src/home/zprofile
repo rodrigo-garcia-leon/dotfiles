@@ -65,7 +65,7 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 # nvm
-export NVM_DIR="$HOME/Repositories/nvm"
+export NVM_DIR="$HOME/Developer/Repositories/nvm"
 
 # python
-export PROJECT_HOME="$HOME/Repositories"
+export PROJECT_HOME="$HOME/Developer/Repositories"
