@@ -12,6 +12,7 @@ alias f='fasd -f'
 alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 alias l='exa --long --all --git --group'
 alias c='bat'
+alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 # }}}
 # {{{ sources
 [[ -e $HOME/.secrets ]] && source $HOME/.secrets
