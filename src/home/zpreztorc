@@ -33,7 +33,6 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
-  'python' \
   'utility' \
   'completion' \
   'syntax-highlighting' \
@@ -45,7 +44,8 @@ zstyle ':prezto:load' pmodule \
   'homebrew' \
   'fasd' \
   'git' \
-  'node'
+  'node' \
+  'python'
 
 #
 # Autosuggestions
@@ -94,13 +94,13 @@ zstyle ':prezto:module:editor' ps-context 'yes'
 #
 
 # Set the query found color.
- zstyle ':prezto:module:history-substring-search:color' found ''
+#  zstyle ':prezto:module:history-substring-search:color' found ''
 
 # Set the query not found color.
- zstyle ':prezto:module:history-substring-search:color' not-found ''
+#  zstyle ':prezto:module:history-substring-search:color' not-found ''
 
 # Set the search globbing flags.
- zstyle ':prezto:module:history-substring-search' globbing-flags ''
+#  zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
 # macOS
@@ -183,14 +183,16 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
   'root'
 
 # Set syntax highlighting styles.
- zstyle ':prezto:module:syntax-highlighting' pattern \
-   'rm*-rf*' 'fg=white,bold,bg=red'
+# zstyle ':prezto:module:syntax-highlighting' styles \
+#   'builtin' 'bg=blue' \
+#   'command' 'bg=blue' \
+#   'function' 'bg=blue'
  #zstyle ':prezto:module:syntax-highlighting' pattern \
  #  'e' 'fg=green,bold,bg=black'
 
 # Set syntax pattern styles.
-# zstyle ':prezto:module:syntax-highlighting' pattern \
-#   'rm*-rf*' 'fg=white,bold,bg=red'
+zstyle ':prezto:module:syntax-highlighting' pattern \
+  'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal

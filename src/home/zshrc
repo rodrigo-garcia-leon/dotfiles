@@ -3,16 +3,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 # }}}
-# {{{ constants
-ING_NETWORK="ENTER"
-REPOSITORIES_DIR="$HOME/Developer/Repositories"
-# }}}
 # {{{ aliases
 alias f='fasd -f'
-alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 alias l='exa --long --all --git --group'
 alias c='bat'
-alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
+alias git='hub'
 # }}}
 # {{{ sources
 [[ -e $HOME/.secrets ]] && source $HOME/.secrets
@@ -20,46 +15,15 @@ alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
 # }}}
 # {{{ functions
 function remove_node_modules { rm -rf node_modules* } 
-function remove_bower_components { rm -rf bower_components* } 
-function remove_dependencies { remove_bower_components; remove_node_modules; }
-function setup_ing_proxy() { source $REPOSITORIES_DIR/ing/scripts/setup_proxy }
-function unset_ing_proxy() { source $REPOSITORIES_DIR/ing/scripts/unset_proxy }
-function link_ing_npmrc() { ln -s $REPOSITORIES_DIR/ing/dotfiles/npmrc $HOME/.npmrc }
-function unlink_ing_npmrc() { unlink $HOME/.npmrc }
-function link_ing_maven_settings() { ln -s $REPOSITORIES_DIR/ing/dotfiles/settings.xml $HOME/.m2/settings.xml }
-function unlink_ing_maven_settings() { unlink $HOME/.m2/settings.xml }
-function link_ing_settings() { link_ing_npmrc; link_ing_maven_settings; }
-function unlink_ing_settings() { unlink_ing_npmrc; unlink_ing_maven_settings; }
-function ing_ssh() { ssh -t jumphost ssh -t $@ }
-# }}}
-# {{{ node
-export NODE_EXTRA_CA_CERTS="/etc/ssl/ing-certs.pem"
 # }}}
 # {{{ hub
 eval "$(hub alias -s)"
-# }}}
-# {{{ jenv
-eval "$(jenv init -)"
-jenv_set_java_home
 # }}}
 # {{{ fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 # }}}
-# {{{ rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# }}}
-# {{{ gcloud
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-# }}}
 # {{{ bat
 export BAT_THEME='DarkNeon'
-# }}}
-# {{{ ing
-if [[ $(networksetup -getcurrentlocation) == $ING_NETWORK ]]; then
-  setup_ing_proxy
-  enable_spotify_proxy
-fi
 # }}}
 # vim:foldmethod=marker:foldlevel=0

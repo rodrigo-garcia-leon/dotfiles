@@ -1,14 +1,12 @@
-[github]
-	user = yo@rodrigogarcia.me
-[pull]
-	rebase = true
-[includeIf "gitdir:~/Developer/Repositories/"]
-  path = .gitconfig-personal
-[includeIf "gitdir:~/Developer/Repositories/ing/"]
-  path = .gitconfig-work
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	autocrlf = input
 	precomposeUnicode = true
 [ssh]
 	variant = ssh
+[user]
+	email = yo@rodrigogarcia.me
+	name = Rodrigo García
+[pull]
+	rebase = true
+[github]
+	user = yo@rodrigogarcia.me
