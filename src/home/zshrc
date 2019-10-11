@@ -16,9 +16,6 @@ alias git='hub'
 # {{{ functions
 function remove_node_modules { rm -rf node_modules* } 
 # }}}
-# {{{ hub
-eval "$(hub alias -s)"
-# }}}
 # {{{ fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'

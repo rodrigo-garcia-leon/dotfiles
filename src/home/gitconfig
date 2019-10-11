@@ -10,3 +10,8 @@
 	rebase = true
 [github]
 	user = yo@rodrigogarcia.me
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch

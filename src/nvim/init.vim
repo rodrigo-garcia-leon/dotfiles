@@ -98,7 +98,6 @@ let g:airline_symbols.linenr='☰'
 let g:airline_symbols.maxlinenr=''
 let g:airline#extensions#branch#enabled=1
 let g:airline#extensions#hunks#enabled=1
-let g:airline_theme='gruvbox'
 " }}}
 " {{{ syntastic 
 set statusline+=%#warningmsg#
