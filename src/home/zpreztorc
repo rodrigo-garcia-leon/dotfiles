@@ -45,7 +45,8 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'git' \
   'node' \
-  'python'
+  'python' \
+  'ruby'
 
 #
 # Autosuggestions
