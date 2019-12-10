@@ -16,3 +16,4 @@
     st = status
     br = branch
 	cp = cherry-pick
+	re = rebase
