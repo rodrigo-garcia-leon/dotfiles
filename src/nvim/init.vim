@@ -15,7 +15,6 @@ Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/fzf'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'rust-lang/rust.vim'
@@ -82,6 +81,9 @@ noremap <leader>sc :noh<CR>
 xnoremap < <gv
 xnoremap > >gv
 " }}}
+" {{{ other shortcuts 
+noremap <C-P> :FZF<CR>
+" }}}
 " {{{ airline 
 let g:airline_powerline_fonts=1
 let g:airline_symbols={}
@@ -111,9 +113,6 @@ let g:syntastic_html_checkers=['eslint']
 let g:syntastic_html_eslint_exec='$(npm bin)/eslint'
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exec='$(npm bin)/eslint'
-" }}}
-" {{{ fzf 
-command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob """!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 " }}}
 " {{{ python3
 let g:python3_host_prog='/Users/rodrigogarcialeon/.virtualenvs/neovim/bin/python'
