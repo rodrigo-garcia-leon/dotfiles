@@ -10,6 +10,8 @@
 	rebase = true
 [github]
 	user = yo@rodrigogarcia.me
+[advice]
+	detachedHead = false
 [alias]
     co = checkout
     ci = commit
