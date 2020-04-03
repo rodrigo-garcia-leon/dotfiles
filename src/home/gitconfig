@@ -13,9 +13,9 @@
 [advice]
 	detachedHead = false
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
 	cp = cherry-pick
 	re = rebase
