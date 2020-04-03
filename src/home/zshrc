@@ -14,15 +14,12 @@ alias git='hub'
 [[ -e $HOME/.secrets ]] && source $HOME/.secrets
 [[ -e $HOME/.vi-mode-cursor ]] && source $HOME/.vi-mode-cursor
 # }}}
-# {{{ functions
-function remove_node_modules { rm -rf node_modules* } 
-# }}}
 # {{{ fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 # }}}
 # {{{ bat
-export BAT_THEME='DarkNeon'
+export BAT_THEME='base16'
 # }}}
 # {{{ gcloud
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc 
