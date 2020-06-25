@@ -29,9 +29,6 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
-# go
-export GOPATH="$HOME/.go"
-
 #
 # Paths
 #
@@ -40,16 +37,13 @@ export GOPATH="$HOME/.go"
 typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that cd searches.
-cdpath=(
-  $cdpath
-)
+# cdpath=(
+#   $cdpath
+# )
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk
-  $HOME/Repositories/depot-tools
-  $HOME/.cargo/bin
-  $GOPATH/bin
+  /usr/local/opt/fzf/bin
   /usr/local/{bin,sbin}
   $path
 )
@@ -69,8 +63,14 @@ if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
 
-# nvm
-export NVM_DIR="$HOME/Repositories/nvm"
+# 
+# fzf
+#
 
-# python
-export PROJECT_HOME="$HOME/Repositories"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+#
+# bat
+#
+ 
+export BAT_THEME='base16'
