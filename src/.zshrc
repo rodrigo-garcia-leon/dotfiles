@@ -15,6 +15,7 @@ fi
 #
 
 alias c='bat'
+alias code='code-insiders'
 alias f='fasd -f'
 alias l='exa --long --all --git --group'
 alias ls='exa'
