@@ -15,12 +15,15 @@ fi
 #
 
 alias c='bat'
+alias cp='cp'
 alias code='code-insiders'
 alias f='fasd -f'
 alias l='exa --long --all --git --group'
 alias ls='exa'
 alias g='hub'
 alias git='hub'
+alias rm='rm'
+alias upd='brew update && brew upgrade && brew cask upgrade'
 
 #
 # Sources
@@ -28,5 +31,4 @@ alias git='hub'
 
 source $HOME/.secrets
 source $HOME/.vi-mode-cursor
-[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
