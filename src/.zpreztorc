@@ -41,7 +41,8 @@ zstyle ':prezto:load' pmodule \
   'contrib-prompt' \
   'prompt' \
   'fasd' \
-  'node'
+  'node' \
+  'python'
 
 #
 # Autosuggestions
