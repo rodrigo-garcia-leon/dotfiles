@@ -19,3 +19,6 @@
 	br = branch
 	cp = cherry-pick
 	re = rebase
+[cinnabar]
+	version-check = 1597517073
+	helper = /home/rodrigo/.mozbuild/git-cinnabar/git-cinnabar-helper
