@@ -23,7 +23,7 @@ alias ls='exa'
 alias g='hub'
 alias git='hub'
 alias rm='rm'
-alias upd='brew update && brew upgrade && brew cask upgrade'
+alias upd='aur sync -u && sudo pacman -Syu'
 
 #
 # Sources
