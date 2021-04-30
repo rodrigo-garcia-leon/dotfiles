@@ -31,4 +31,4 @@ alias upd='aur sync -u && sudo pacman -Syu'
 
 source $HOME/.secrets
 source $HOME/.vi-mode-cursor
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/usr/share/fzf/key-bindings.zsh"
