@@ -23,7 +23,11 @@ alias ls='exa'
 alias g='hub'
 alias git='hub'
 alias rm='rm'
-alias upd='brew update && brew upgrade && brew cask upgrade'
+alias upd='sudo apt update && sudo apt upgrade'
+
+#
+#
+##
 
 #
 # Sources
@@ -31,4 +35,4 @@ alias upd='brew update && brew upgrade && brew cask upgrade'
 
 source $HOME/.secrets
 source $HOME/.vi-mode-cursor
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+source "/usr/share/doc/fzf/examples/key-bindings.zsh"
