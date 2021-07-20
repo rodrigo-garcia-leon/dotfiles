@@ -23,7 +23,7 @@ alias ls='exa'
 alias g='hub'
 alias git='hub'
 alias rm='rm'
-alias upd='aur sync -u && sudo pacman -Syu'
+alias upd='rustup update && aur sync -u && sudo pacman -Syu && flatpak update'
 
 #
 # Sources
